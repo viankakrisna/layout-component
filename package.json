@@ -1,5 +1,5 @@
 {
-  "name": "layout-component",
+  "name": "@viankakrisna/layout-component",
   "version": "1.0.0",
   "description": "layout-component React component",
   "main": "lib/index.js",
@@ -19,6 +19,7 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
+    "react-icons": "^2.2.3",
     "styled-components": "^1.4.5"
   },
   "peerDependencies": {

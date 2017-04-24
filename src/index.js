@@ -1,7 +1,12 @@
 import React from 'react';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { injectGlobal, css } from 'styled-components';
+
+export { default as theme } from './theme';
 
 injectGlobal`
+	* {
+		box-sizing: border-box;
+	}
 	body {
 		margin: 0;
 		padding: 0;
@@ -35,7 +40,7 @@ export const Box = styled(props => (
 		</div>
 	</div>
 ))`
-	&:before {
+	${props => (props.ar ? css`&:before {
 		content: '';
 		display: block;
 		padding-top: ${props => props.ar * 100}%;
@@ -47,48 +52,35 @@ export const Box = styled(props => (
 		left: 0;
 		right: 0;
 		bottom: 0;
-	}
-`;
-
-export const Column = styled.div`
-  flex: ${props => props.flex || 1} ${props => props.xs * 100 || 100}%;
-  width: ${props => props.xs * 100 || 100}%;
-
-  @media (min-width: 768px){
-    flex: ${props => props.flex || 1} ${props => (props.sm || props.xs) * 100 || 100}%;
-    width: ${props => (props.sm || props.xs) * 100 || 100}%;
-  }
-
-  @media (min-width: 992px){
-    flex: ${props => props.flex || 1} ${props => (props.md || props.sm) * 100 || 100}%;
-    width: ${props => (props.md || props.sm) * 100 || 100}%;
-  }
-
-  @media (min-width: 1200px){
-    flex: ${props => props.flex || 1} ${props => (props.lg || props.md) * 100 || 100}%;
-    width: ${props => (props.lg || props.md) * 100 || 100}%;
-  }
-
-`;
-
-export const Col = Column;
-
-export const Row = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-`;
-
-export const Grid = styled.div`
-  width: 100%;
-  max-width: ${props => (props.fluid ? '100%' : '1160px')};
-  margin: auto;
-  box-sizing: border-box;
+	}` : '')}
+	${props => (props.textAlign ? css`
+		text-align: ${props.textAlign};
+		` : '')}
 `;
 
 export const Padding = styled.div`
 	padding: ${props => props.padding};
+	padding: ${props => [props.top, props.right, props.bottom, props.left]
+		.map(e => String(e || 0) + (Number.isInteger(e) ? 'px' : ''))
+		.join(' ')};
 	padding: ${props => String(props.all) + (Number.isInteger(props.all) ? 'px' : '')};
-	padding: ${props => [props.top, props.right, props.bottom, props.left].map(e => String(e) + (Number.isInteger(e) ? 'px' : ''))}
+
 `;
 
-export default Grid;
+export const FlexGrid = styled.div`
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+`;
+
+export const FlexRow = styled.div`
+	display: flex;
+	alignItems: ${props => props.alignItems || 'center'};
+	margin-left: -0.5em;
+	margin-right: -0.5em;
+`;
+
+export const FlexColumn = styled.div`
+	flex: ${props => props.flex || '0 0 auto'};
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+`;
