@@ -2,22 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import Search from 'react-icons/lib/md/search';
 
-const SearchBarWrapper = styled.div`
+export const SearchBarWrapper = styled.div`
 	display: flex;
-	flex: 0 0 15em;
+	flex: 0 0 ${props => props.theme.baseFontSize * 15};
 	border-radius: 2px;
+	overflow: hidden;
 	background: rgba(255,255,255,0.25);
 `;
 
-const SearchBarInput = styled.input`
-	line-height: 36px;
+export const SearchBarInput = styled.input`
+	line-height: ${props => props.theme.headerInnerHeight};
 	border: 0;
-	padding: 0 16px;
-	color: ${props => props.theme.color.primaryText};
+	padding: 0 ${props => props.theme.baseFontSize};
 	transition: 250ms;
-	font-size: 16px;
+	font-size: ${props => props.theme.baseFontSize};
 	box-sizing: border-box;
-	background: transparent;
+	background: ${props => props.theme.color.headerSearchBar || 'transparent'};
+	color: ${props => props.theme.color.headerSearchBarText || props.theme.color.primaryText};
 	flex: 1;
 	&:focus {
 		outline: none;
@@ -28,15 +29,16 @@ const SearchBarInput = styled.input`
 	}
 `;
 
-const SearchBarInputButton = styled.button`
-	line-height: 36px;
+export const SearchBarInputButton = styled.button`
+	line-height: ${props => props.theme.headerInnerHeight};
 	border: 0;
-	padding: 0 16px;
+	padding: 0 ${props => props.theme.baseFontSize};
 	color: ${props => props.theme.color.primaryText};
 	transition: 250ms;
 	background: transparent;
-	font-size: 16px;
+	font-size: ${props => props.theme.baseFontSize};
 	box-sizing: border-box;
+	cursor: pointer;
 	&:focus {
 		outline: none;
 	}

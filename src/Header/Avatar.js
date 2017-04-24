@@ -7,8 +7,8 @@ export const Avatar = styled.div`
 	font-family: sans-serif;
 	padding: 0;
 	border-radius: 50%;
-	width: 36px;
-	height: 36px;
+	width: ${props => props.theme.headerInnerHeight};
+	height: ${props => props.theme.headerInnerHeight};
 	background: rgba(255,255,255,0.25);
 	cursor: pointer;
 	border: 0;

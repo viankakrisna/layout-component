@@ -4,9 +4,11 @@ export default [
 		children: [
 			{
 				name: 'Home',
+				url: '/admin',
 			},
 			{
 				name: 'Updates',
+				url: '/admin/updates',
 			},
 		],
 	},
@@ -15,15 +17,19 @@ export default [
 		children: [
 			{
 				name: 'All Posts',
+				url: '/admin/posts',
 			},
 			{
 				name: 'Add New',
+				url: '/admin/posts/add',
 			},
 			{
 				name: 'Categories',
+				url: '/admin/posts/categories',
 			},
 			{
 				name: 'Tags',
+				url: '/admin/posts/tags',
 			},
 		],
 	},
@@ -79,7 +85,7 @@ export default [
 		],
 	},
 	{
-		heading: 'Appeareance',
+		heading: 'eareance',
 		children: [
 			{
 				name: 'All Posts',

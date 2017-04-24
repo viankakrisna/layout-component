@@ -1,6 +1,7 @@
+import React from 'react';
 import styled from 'styled-components';
 
-export const Layout = styled.div`
+export const LayoutWrapper = styled.div`
 	padding-top: ${props => props.theme.headerHeight};
 	display: flex;
 	flex-wrap: wrap;
@@ -11,6 +12,31 @@ export const Layout = styled.div`
 	left: 0;
 	right: 0;
 	bottom: 0;
+	margin: auto;
+	max-width: ${props => (props.contained ? props.theme.size.container : '100%')};
+	font-size: ${props => props.theme.baseFontSize}
 `;
+
+export const LayoutContainer = styled.div`
+	padding-top: ${props => props.theme.headerHeight};
+	display: flex;
+	flex-wrap: wrap;
+	align-item: flex-start;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	max-width: ${props => (props.contained ? props.theme.size.container : '100%')};
+`;
+
+export const Layout = props => (
+	<LayoutWrapper className={props.className}>
+		<LayoutContainer contained={props.contained}>
+			{props.children}
+		</LayoutContainer>
+	</LayoutWrapper>
+);
 
 export default Layout;

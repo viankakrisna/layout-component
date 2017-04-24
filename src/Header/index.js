@@ -6,14 +6,14 @@ export { default as MenuButton } from './MenuButton';
 export { default as Menu } from './Menu';
 
 export const Header = styled.div`
-	position: absolute;
+	position: ${props => (props.fixed ? 'fixed' : 'absolute')};
 	top: 0;
 	left: 0;
 	right: 0;
 	padding: 0 0;
 	background: ${props => props.theme.color.primary};
 	display: flex;
-	flex: 0 0 100%;
+	flex: ${props => props.flex || '0 0 100%'};
 	flex-wrap: wrap;
 	align-items: center;
 	height: ${props => props.theme.headerHeight || '64px'};

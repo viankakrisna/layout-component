@@ -74,7 +74,7 @@ export const FlexGrid = styled.div`
 
 export const FlexRow = styled.div`
 	display: flex;
-	alignItems: ${props => props.alignItems || 'center'};
+	align-items: ${props => props.alignItems || 'inherit'};
 	margin-left: -0.5em;
 	margin-right: -0.5em;
 `;
@@ -83,4 +83,14 @@ export const FlexColumn = styled.div`
 	flex: ${props => props.flex || '0 0 auto'};
 	padding-left: 0.5em;
 	padding-right: 0.5em;
+`;
+
+export const Container = styled.div`
+	width: 100%;
+	max-width: 1024px;
+	margin: auto;
+	display: flex;
+	align-items: inherit;
+	position: relative;
+	min-height: 100%;	
 `;

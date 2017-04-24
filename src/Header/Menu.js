@@ -4,8 +4,8 @@ import Menu from 'react-icons/lib/md/menu';
 
 export const MenuButton = styled.a`
 	border: 0;
-	font-size: 1em;
-	display: inline-block;
+	font-size: ${props => props.theme.baseFontSize};
+	display: inline-flex;
 	line-height: ${props => props.theme.headerHeight};
 	color: ${props => props.theme.color.primaryText};
 	padding: 0;
