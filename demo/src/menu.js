@@ -1,9 +1,22 @@
 export default [
 	{
+		heading: 'Sites',
+		children: [
+			{
+				name: 'Facebook',
+				url: '/facebook',
+			},
+			{
+				name: 'Wordpress',
+				url: '/admin',
+			},
+		],
+	},
+	{
 		heading: 'Dashboard',
 		children: [
 			{
-				name: 'Home',
+				name: 'Dashboard',
 				url: '/admin',
 			},
 			{

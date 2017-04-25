@@ -6,17 +6,18 @@ export const PanelHeading = styled.div`
 	padding: ${props => props.theme.halfFontSize};
 	background: #f6f7f9;
 	border: ${props => props.theme.border.panel || 'none'};
-	${props => (props.theme.borderColor.panel ? css`borderColor: ${props.theme.borderColor.panel}` : 'inherit')};
+	${props => (props.theme.borderColor.panel ? css`borderColor: ${props.theme.borderColor.panel}` : '')};
 	margin-bottom: -1px;
 `;
 
 export const Panel = styled.div`
 	display: flex;
 	flex: 0 0 100%;
+	flex-wrap: wrap;
 	padding: ${props => props.theme.baseFontSize};
 	background: ${props => props.theme.color.panel || 'white'};
 	border: ${props => props.theme.border.panel || 'none'};
-	${props => (props.theme.borderColor.panel ? css`borderColor: ${props.theme.borderColor.panel}` : 'inherit')};
+	${props => (props.theme.borderColor.panel ? css`borderColor: ${props.theme.borderColor.panel}` : '')};
 	color: ${props => props.theme.color.panelText || 'black'};
 	margin-bottom: ${props => props.theme.baseFontSize};
 `;

@@ -1,54 +1,24 @@
 import React from 'react';
-import { Main, MainHeader, MainContent } from '../../../src/Main';
+import { Route, asyncComponent } from '../../../src';
 
 const AdminMain = props => (
-	<Main>
-		<MainHeader>
-			Test
-		</MainHeader>
-		<MainContent>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, veniam cumque fuga quasi, in sint pariatur at reprehenderit asperiores esse nulla placeat? Repellat perferendis voluptatibus nobis libero expedita ex.
-		</MainContent>
-	</Main>
+	<div>
+		<Route
+			exact
+			path="/admin"
+			component={asyncComponent(() => import('./Dashboard'))}
+		/>
+		<Route
+			exact
+			path="/admin/updates"
+			component={asyncComponent(() => import('./Updates'))}
+		/>
+		<Route
+			exact
+			path="/admin/posts"
+			component={asyncComponent(() => import('./Posts'))}
+		/>
+	</div>
 );
 
 export default AdminMain;

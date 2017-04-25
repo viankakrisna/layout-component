@@ -1,14 +1,13 @@
 import React from 'react';
-import { Padding, Box, FlexColumn, theme } from '../../../src';
-
 import {
+	FlexColumn,
 	Header,
 	Logo,
 	SearchBar,
 	Avatar,
 	MenuButton,
 	Menu,
-} from '../../../src/Header';
+} from '../../../src';
 
 export const AdminHeader = props => (
 	<Header>
@@ -21,8 +20,15 @@ export const AdminHeader = props => (
 			</Logo>
 		</FlexColumn>
 		<FlexColumn>
-			<Menu />
-			<Menu />
+			<Menu to="/admin/comment">Comment</Menu>
+			<Menu
+				onClick={e => {
+					e.preventDefault();
+					props.setActiveHeaderMenu('new');
+				}}
+			>
+				New
+			</Menu>
 			<Menu />
 			<Menu />
 			<Menu />

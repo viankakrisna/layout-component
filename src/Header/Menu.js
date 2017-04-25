@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Menu from 'react-icons/lib/md/menu';
 
-export const MenuButton = styled.a`
+export const Menu = styled(Link)`
 	border: 0;
 	font-size: ${props => props.theme.baseFontSize};
 	display: inline-flex;
@@ -14,6 +14,7 @@ export const MenuButton = styled.a`
 	align-content: center;
 	transition: 250ms;
 	border-bottom: 2px solid transparent;
+	text-decoration: none;
 	&:active {
 		border-bottom: 2px solid rgba(255,255,255,1);
 		outline: none;
@@ -25,7 +26,8 @@ export const MenuButton = styled.a`
 	}
 	flex: 0 0 auto;
 `;
-MenuButton.defaultProps = {
+Menu.defaultProps = {
+	to: '/',
 	children: 'Link',
 };
-export default MenuButton;
+export default Menu;

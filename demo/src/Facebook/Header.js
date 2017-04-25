@@ -1,12 +1,15 @@
 import React from 'react';
-import { Padding, Box, FlexColumn, Container, theme } from '../../../src';
-
-import { Header, Logo, Avatar, MenuButton, Menu } from '../../../src/Header';
 import {
 	SearchBarInput,
 	SearchBarInputButton,
 	SearchBarWrapper,
-} from '../../../src/Header/SearchBar';
+	FlexColumn,
+	Container,
+	Header,
+	Logo,
+	Avatar,
+	Menu,
+} from '../../../src';
 
 export const AdminHeader = props => (
 	<Header fixed>

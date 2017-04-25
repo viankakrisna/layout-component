@@ -1,9 +1,52 @@
 import React from 'react';
-import styled, { injectGlobal, css } from 'styled-components';
-
+import { Link } from 'react-router-dom';
+import styled, { injectGlobal } from 'styled-components';
+export { ThemeProvider } from 'styled-components';
+export * from './Flex';
+export * from './Header';
+export * from './Header/SearchBar';
+export * from './Main';
+export * from './Sidebar';
+export * from './Panel';
+export * from 'react-router-dom';
+export { default as asyncComponent } from './helper/asyncComponent';
 export { default as theme } from './theme';
+export { default as Layout } from './Layout';
+export { default as Container } from './Container';
+import * as md from 'react-icons/lib/md';
+export const Button = styled.button`
+	line-height: 36px;
+	padding: 0 1em;
+	display: flex;
+	text-transform: uppercase;
+	font-size: 16px;
+	border-radius: 4px;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	color: inherit;
+`;
+export const renderMenu = menu => (
+	<ul>
+		{menu.map((item, index) => (
+			<li key={index} className>
+				{item.name ? React.createElement(md[item.icon] || md.MdAdb) : null}
+				{item.name
+					? <Link to={item.url || '#'}>
+							{item.name}
+						</Link>
+					: null}
+				{item.heading ? <h4>{item.heading}</h4> : null}
+				{item.children ? renderMenu(item.children) : null}
+			</li>
+		))}
+	</ul>
+);
+export const Table = styled.table`
+	width: 100%;
+`;
 
-injectGlobal`
+export const init = props => injectGlobal`
 	* {
 		box-sizing: border-box;
 	}
@@ -13,84 +56,4 @@ injectGlobal`
 		font-family: sans-serif;
 	}
 `;
-
-export class FullHeight extends React.Component {
-	state = {
-		height: window.innerHeight,
-	};
-	calculateHeight = e => window.innerHeight;
-
-	componentDidMount() {
-		this.calculateHeight();
-		window.addEventListener('resize', this.calculateHeight);
-	}
-	render() {
-		return (
-			<div style={{ minHeight: this.state.height, ...this.props.style }}>
-				{this.props.children}
-			</div>
-		);
-	}
-}
-
-export const Box = styled(props => (
-	<div className={props.className}>
-		<div>
-			{props.children}
-		</div>
-	</div>
-))`
-	${props => (props.ar ? css`&:before {
-		content: '';
-		display: block;
-		padding-top: ${props => props.ar * 100}%;
-	}
-	position: relative;
-	> div {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-	}` : '')}
-	${props => (props.textAlign ? css`
-		text-align: ${props.textAlign};
-		` : '')}
-`;
-
-export const Padding = styled.div`
-	padding: ${props => props.padding};
-	padding: ${props => [props.top, props.right, props.bottom, props.left]
-		.map(e => String(e || 0) + (Number.isInteger(e) ? 'px' : ''))
-		.join(' ')};
-	padding: ${props => String(props.all) + (Number.isInteger(props.all) ? 'px' : '')};
-
-`;
-
-export const FlexGrid = styled.div`
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-`;
-
-export const FlexRow = styled.div`
-	display: flex;
-	align-items: ${props => props.alignItems || 'inherit'};
-	margin-left: -0.5em;
-	margin-right: -0.5em;
-`;
-
-export const FlexColumn = styled.div`
-	flex: ${props => props.flex || '0 0 auto'};
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-`;
-
-export const Container = styled.div`
-	width: 100%;
-	max-width: 1024px;
-	margin: auto;
-	display: flex;
-	align-items: inherit;
-	position: relative;
-	min-height: 100%;	
-`;
+init();

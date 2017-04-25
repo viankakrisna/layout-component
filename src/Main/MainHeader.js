@@ -9,6 +9,7 @@ export const ContentHeader = styled.div`
 	height: 2.5em;
 	line-height: 2.5em
 	font-size: 1.5em;
+	align-items: center;
 `;
 
 export default ContentHeader;

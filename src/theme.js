@@ -13,4 +13,5 @@ export default {
 		container: '1024px',
 	},
 	border: {},
+	borderColor: {},
 };

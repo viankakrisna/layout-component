@@ -1,4 +1,19 @@
-import React from 'react';
 import { render } from 'react-dom';
-import Facebook from './Facebook';
-render(<Facebook />, document.querySelector('#demo'));
+import React from 'react';
+import { asyncComponent, BrowserRouter as Router, Route } from '../../src';
+
+const BasicExample = () => (
+	<Router>
+		<div>
+			<Route
+				path="/facebook"
+				component={asyncComponent(() => import('./Facebook'))}
+			/>
+			<Route
+				path="/admin"
+				component={asyncComponent(() => import('./Admin'))}
+			/>
+		</div>
+	</Router>
+);
+render(<BasicExample />, document.querySelector('#demo'));

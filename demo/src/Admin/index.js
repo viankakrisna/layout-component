@@ -2,9 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Main from './Main';
-import { Layout } from '../../../src/Layout';
-import { theme } from '../../../src';
-import { ThemeProvider } from 'styled-components';
+import { Layout, theme, ThemeProvider } from '../../../src';
 
 const Admin = props => (
 	<ThemeProvider theme={theme}>
