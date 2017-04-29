@@ -5,7 +5,7 @@ import Main from './Main';
 import { Layout, theme, ThemeProvider } from '../../../src';
 
 const Admin = props => (
-	<ThemeProvider theme={theme}>
+	<ThemeProvider theme={theme()}>
 		<Layout>
 			<Header />
 			<Sidebar />

@@ -7,6 +7,10 @@ export default [
 				url: '/facebook',
 			},
 			{
+				name: 'Twitter',
+				url: '/twitter',
+			},
+			{
 				name: 'Wordpress',
 				url: '/admin',
 			},

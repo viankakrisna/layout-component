@@ -9,8 +9,8 @@ export const Main = styled.div`
 	bottom: 0;
 	overflow: auto;
 	align-content: flex-start;
-	top: ${props => props.theme.headerHeight};
-	left: ${props => props.theme.sidebarWidth};
+	top: ${props => props.theme.height.header};
+	left: ${props => props.theme.width.sidebar};
 `;
 
 export default Main;

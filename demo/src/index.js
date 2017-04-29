@@ -2,7 +2,7 @@ import { render } from 'react-dom';
 import React from 'react';
 import { asyncComponent, BrowserRouter as Router, Route } from '../../src';
 
-const BasicExample = () => (
+const AppRouter = () => (
 	<Router>
 		<div>
 			<Route
@@ -13,7 +13,11 @@ const BasicExample = () => (
 				path="/admin"
 				component={asyncComponent(() => import('./Admin'))}
 			/>
+			<Route
+				path="/twitter"
+				component={asyncComponent(() => import('./Twitter'))}
+			/>
 		</div>
 	</Router>
 );
-render(<BasicExample />, document.querySelector('#demo'));
+render(<AppRouter />, document.querySelector('#demo'));

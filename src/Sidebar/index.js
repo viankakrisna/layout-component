@@ -2,14 +2,14 @@ import styled, { css } from 'styled-components';
 
 export const Sidebar = styled.div`
 	display: flex;
-	max-width: 16em;
+	max-width: ${props => props.theme.width.sidebar};
 	position: absolute;
 	left: 0;
-	top: ${props => props.theme.headerHeight};
+	top: ${props => props.theme.height.header};
 	bottom: 0;
 	overflow: auto;
 	${props => (props.flat ? css`` : css`
-		background: ${props => props.theme.color.sidebarColor || 'white'};
+		background: ${props => props.theme.backgroundColor.sidebar || 'white'};
 		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 	`)}
 	color: rgba(0,0,0,0.54);

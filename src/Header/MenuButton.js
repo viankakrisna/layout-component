@@ -6,7 +6,7 @@ export const MenuButton = styled.button`
 	border: 0;
 	font-size: 22px;
 	line-height: 36px;
-	color: ${props => props.theme.color.primaryText};
+	color: ${props => props.theme.color.primary};
 	font-family: sans-serif;
 	padding: 0;
 	border-radius: 50%;

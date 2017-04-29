@@ -14,11 +14,12 @@ export const AdminHeader = props => (
 		<FlexColumn>
 			<MenuButton />
 		</FlexColumn>
-		<FlexColumn flex={1}>
+		<FlexColumn>
 			<Logo>
 				Layout Component
 			</Logo>
 		</FlexColumn>
+		<FlexColumn flex={1} />
 		<FlexColumn>
 			<Menu to="/admin/comment">Comment</Menu>
 			<Menu

@@ -15,25 +15,21 @@ export const AdminHeader = props => (
 	<Header fixed>
 		<Container>
 			<FlexColumn>
+				<Menu to="/twitter">Home</Menu>
+				<Menu to="/twitter/notifications">Notifications</Menu>
+				<Menu to="/twitter/messages">Messages</Menu>
+			</FlexColumn>
+			<FlexColumn flex={1}>
 				<Logo>
-					FB
+					TW
 				</Logo>
 			</FlexColumn>
-			<FlexColumn flex={'0 0 448px'}>
-				<SearchBarWrapper>
-					<SearchBarInput defaultValue={'Search Facebook'} />
+			<FlexColumn flex={'0 0 221px'}>
+				<SearchBarWrapper rounded>
+					<SearchBarInput defaultValue={'Search Twitter'} />
 					<SearchBarInputButton />
 				</SearchBarWrapper>
 			</FlexColumn>
-			<FlexColumn flex={1} />
-			<FlexColumn>
-				<Menu />
-				<Menu />
-				<Menu />
-				<Menu />
-				<Menu />
-			</FlexColumn>
-
 			<FlexColumn>
 				<Avatar />
 			</FlexColumn>

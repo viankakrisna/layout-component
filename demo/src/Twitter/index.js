@@ -9,32 +9,37 @@ import merge from 'lodash/merge';
 const Admin = props => (
 	<ThemeProvider
 		theme={merge(theme(), {
-			height: {
-				header: '43px',
-				headerInner: '24px',
-			},
 			font: {
 				size: {
 					base: '14px',
 				},
 			},
+			height: {
+				header: '46px',
+				headerInner: '32px',
+			},
 			width: {
 				sidebar: '184px',
-			},
-			color: {
-				...theme.color,
-				headerSearchBar: 'black',
-				primary: 'white',
+				container: '1190px',
 			},
 			backgroundColor: {
-				headerSearchBar: 'white',
-				header: '#3b5998',
+				header: 'white',
+				headerSearchBar: '#f5f8fa',
+				primary: '#3b5998',
+			},
+			color: {
+				headerSearchBar: 'black',
+				header: 'black',
+				primary: 'white',
 			},
 			border: {
 				panel: '1px solid',
 			},
 			borderColor: {
 				panel: '#e5e6e9 #dfe0e4 #d0d1d5',
+			},
+			borderRadius: {
+				searchbarWrapper: '16px',
 			},
 		})}
 	>
